@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "release": "standard-version"
   },
   "dependencies": {
     "expo": "~46.0.13",
@@ -14,7 +15,8 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
-    "react-native-web": "~0.18.7"
+    "react-native-web": "~0.18.7",
+    "standard-version": "^9.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
