@@ -22,5 +22,8 @@
     "@types/react-native": "~0.69.1",
     "typescript": "~4.3.5"
   },
-  "private": true
+  "private": true,
+  "repository": "git@github.com:jakevollkommer/Tracks.git",
+  "author": "jakevollkommer <7663746+jakevollkommer@users.noreply.github.com>",
+  "license": "MIT"
 }
