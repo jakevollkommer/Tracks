@@ -1,13 +1,14 @@
-import { Text, View } from 'react-native';
 import { TailwindProvider } from 'tailwind-rn';
 import utilities from './tailwind.json';
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './src/navigator/RootNavigator';
 
 export default function App() {
   return (
     <TailwindProvider utilities={utilities}>
-      <View>
-        <Text>tailwind</Text>
-      </View>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
     </TailwindProvider>
   );
 }
