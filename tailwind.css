@@ -38,16 +38,6 @@
   border-bottom-width: 1px
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity))
-}
-
 .p-5 {
   padding: 1.25rem
 }
@@ -91,8 +81,4 @@
 
 .font-bold {
   font-weight: 700
-}
-
-.italic {
-  font-style: italic
 }

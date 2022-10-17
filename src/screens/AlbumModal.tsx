@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { CompositeNavigationProp, RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -24,6 +24,7 @@ const AlbumModal = () => {
   const navigation = useNavigation<AlbumModalNavigationProp>();
   // Get the passed props from navigation
   const { params: { name, listened, liked, rating } } = useRoute<AlbumModalRouteProp>();
+  const [isLiked, setLiked] = useState<boolean>(false);
 
   return (
     <View>
@@ -39,9 +40,15 @@ const AlbumModal = () => {
       <View style={{ marginTop: 10 }}>
         <View style={[tw("py-5 border-b"), { borderColor: "#59C1CC" }]}>
           <Text style={[tw("text-center text-xl font-bold"), { color: "#59C1CC" }]}>{name}</Text>
-          <Text style={[tw("text-center italic text-sm")]}>Deliveries</Text>
         </View>
       </View>
+
+      <TouchableOpacity
+        style={tw("")}>
+        <Icon name={`eye${liked ? "" : "o"}`} type="antdesign" />
+      </TouchableOpacity>
+
+
     </View>
   );
 };

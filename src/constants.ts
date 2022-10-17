@@ -1,6 +1,8 @@
 export const Colors = {
-  mainGreen: "green",
-  secondaryGreen: "lightGreen",
+  backgroundGreen: "#3D550C",
+  mainGreen: "#59981A",
+  secondaryGreen: "81B622",
+  yellow: "#ECF87F",
   gray: "gray"
 } as const
 

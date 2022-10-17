@@ -4,9 +4,9 @@ import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { useTailwind } from 'tailwind-rn/dist';
 import { HomeScreenNavigationProp } from '../screens/HomeScreen';
 import { Card, Image } from '@rneui/themed';
-import { Screens } from '../constants';
+import { Colors, Screens } from '../constants';
 
-const AlbumCard = ({ name, listened, liked, rating }: Album) => {
+const AlbumCard = ({ name, artist, genre, artwork, listened, liked, rating }: Album) => {
   const tw = useTailwind();
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
@@ -14,6 +14,8 @@ const AlbumCard = ({ name, listened, liked, rating }: Album) => {
     <TouchableOpacity onPress={() =>
       navigation.navigate(Screens.AlbumModal, {
         name,
+        artist,
+        genre,
         listened,
         liked,
         rating,
@@ -21,16 +23,19 @@ const AlbumCard = ({ name, listened, liked, rating }: Album) => {
     }>
       <Card containerStyle={tw('p-5 rounded-lg')}>
         <View>
-          <View style={tw('flex-row justify-between')}>
+          <View style={tw('justify-between')}>
             <View>
               <Text style={tw('text-2xl font-bold')}>{name}</Text>
-              <Text style={[tw('text-sm'), { color: "#59C1CC" }]}>
-                name: {name}
+              <Text style={[tw('text-sm'), { color: Colors.gray }]}>
+                {artist}
+              </Text>
+              <Text style={[tw('text-sm'), { color: Colors.gray }]}>
+                {genre}
               </Text>
             </View>
 
             <Image
-              source={{ uri: 'https://links.papareact.com/3jc' }}
+              source={{ uri: artwork }}
               containerStyle={tw("w-full h-64")}
               PlaceholderContent={<ActivityIndicator />}
             />
