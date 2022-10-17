@@ -13,7 +13,7 @@
     "build:tailwind": "tailwindcss --input input.css --output tailwind.css --no-autoprefixer && tailwind-rn",
     "dev:tailwind": "concurrently \"tailwindcss --input input.css --output tailwind.css --no-autoprefixer --watch\" \"tailwind-rn --watch\"",
     "emulator": "firebase emulators:start",
-    "emulator:save": "firebase emulators:start --export-on-exit",
+    "emulator:save": "firebase emulators:start --import src/firebase/emulator-export/firestore-export --export-on-exit",
     "start:emulator": "concurrently 'yarn emulator' 'yarn start:development'",
     "start:emulator:save": "concurrently 'yarn emulator' 'yarn start:development'"
   },
